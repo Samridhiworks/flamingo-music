@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flamingo - Web Player: Music for everyone</title>
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body >
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <!-- <img src="images/logo.png" width="80px" height="50px"> -->
+                <span>Flamingo</span>
+            </div>
+            <div class="contents">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Playlists</a></li>
+                    <li><a href="#" >Subscription</a></li>
+                    <li><a href="#" onclick="openpopup()">Login</a></li>
+                    <input type="text" placeholder="Search Music">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <img src="images/sun.png" width="30px" height="30px" onclick="changemode()" id="image" >
+                </ul>
+
+                <div class="pop-body">
+                    <div class="popup" id="popup">
+                        <div class="img-form">
+                            <div class="image">
+                                <img src="images/img-1.png">
+                            </div>
+                            <div class="form" >
+                                
+                                <div class="form-heading" >
+                                    <div class="icon"  style="float: right; color: #fff; cursor: pointer; background:green;" >
+                                  <button style="width: 50px;" onclick="closepopup()"><i class="fa-solid fa-x" ></i></button>  
+                                </div>
+                                    <h1>Login/Sign Up</h1>
+                                    <p>Get a personalised experience, and access all your music</p>
+                                </div>
+                                <div class="btn-input">
+                                    <button>IN +91</button>
+                                    <input type="text" placeholder="Enter Mobile Number">
+                                </div>
+                                <div class="btn-2" >
+                                    <button type="submit" >SUBMIT</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </nav>
+    </header>
+   
+    <!-- mobile responsive header starts here -->
+    <div class="mb-nav" >
+        <div class="logo" >
+            <span>Flamingo</span>
+        </div>
+        <div class="icon" onclick="openNav()">
+            <i class="fa-solid fa-bars"  ></i>
+        </div>
+    </div>
+    <div class="mb-contents" id="display-content" >
+        <ul>
+         <button style="width: 50px; height: 50px; font-weight: 700;     transform: translate(183px, 10px);"onclick="closeNav()" id="icon">X</button> 
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Playlists</a></li>
+        <li><a href="#">Subscription</a></li>
+        
+    </ul>
+    </div>
+    <!-- banner starts here -->
+    <div class="banner" id="blurvideo">
+        <div class="music-video">
+            <video src="images/songvideo.mp4" controls loop autoplay id="songvideo" onmouseover="playvideo()" onmouseout="pausevideo()" ondblclick="fullscreen()"
+            style="cursor: pointer;"></video>
+        </div>
+    </div>
+
+    <!-- cards starts here -->
+    <section class="sec-1">
+        <div class="card-heading">
+        <div class="heading-1">
+        <h1>New Releases</h1>
+    </div>
+    <div class="gallery-wrap">
+        <img src ="images/previous.png" id="backbtn"  style="width: 70px;" onclick="scrollleft()">
+        <div class="cards" id="cards">
+            <div class="box-1">
+                <a href="song2.html">
+                <div class="image-1">
+                    <!-- <img src="images/song1.webp"> -->
+                    
+                </div>
+               <div class="play-btn">
+                    <img src="images/play.png">
+                </div>
+                <div class="text-1">
+                    <p>O Maahi (From "Dunki")</p>
+                    <p>Pritam - O Maahi (From "Dunki")</p>
+                </div>
+            </a>
+            </div>
+    
+            <div class="box-1">
+                <a href="song3.html">
+                <div class="image-2">
+                    <!-- <img src="images/song1.webp"> -->
+                    
+                </div>
+               <div class="play-btn">
+                    <img src="images/play.png">
+                </div>
+                <div class="text-1">
+                    <p>What Jhumka ? (From "Rocky Aur Rani Kii Prem Kahaani")</p>
+                    <p>Pritam,Arjit Singh - What Jhumka</p>
+                </div>
+            </a>
+            </div>
+    
+            <div class="box-1">
+                <div class="image-3">
+                    <!-- <img src="images/song1.webp"> -->
+                    
+                </div>
+               <div class="play-btn">
+                <a href="song4.html">
+                    <img src="images/play.png">
+                </div>
+                <div class="text-1">
+                    <p>Udd Jaa Kaale Kaava</p>
+                    <p>Udit Narayan, Alka Yagnik - Gadar 2</p>
+                </div>
+            </a>
+            </div>
+    
+            <!-- <a href="song1.html"> -->
+            <div class="box-1" >
+                <a href="song1.html">
+                <div class="image-4">
+                    <!-- <img src="images/song1.webp"> -->
+                    
+                </div>
+               <div class="play-btn">
+                    <img src="images/play.png">
+                </div>
+                <div class="text-1">
+                    <p>Ve Kamleya (From "Rocky Aur Rani Kii Prem Kahaani")</p>
+                    <p>Pritam, Arijit Singh</p>
+                </div>
+            </a>
+            </div>
+        <!-- </a> -->
+        </div>
+        <img src ="images/next.png" id="nextbtn" style="width: 80px;" onclick="scrollright()">
+    </div>
+    
+</div>
+    </section>
+
+    <!-- mobile responsive cards start here -->
+   <div class="mb-sec-1" >
+    <div class="mb-heading-1">
+        <h1>New Releases</h1>
+    </div>
+    <div class="mb-gallery"   >
+        <img src="images/previous.png" style="width: 34px; height: 50px; margin:0px 5px;" id="back"  onclick=" left()">
+        <div class="mb-cards" id="gallery" >
+         
+            <div class="mb-box-1" >
+                <a href="song2.html">
+                <div class="mb-image">
+                    <img src="images/song1.webp">
+                    <p>O Maahi (From "Dunki")</p>
+                </div>
+            </a>
+            </div>
+
+            <div class="mb-box-1">
+                <a href="song3.html">
+                <div class="mb-image">
+                    <img src="images/song2.webp">
+                    <p>What Jhumka ?</p>
+                </div>
+            </a>
+            </div>
+
+            <div class="mb-box-1">
+                <a href="song4.html">
+                <div class="mb-image">
+                    <img src="images/song3.webp">
+                    <p>Udd Jaa Kaale Kaava</p>
+                </div>
+                </a>
+            </div>
+            <div class="mb-box-1">
+                <a href="song1.html">
+                <div class="mb-image">
+                    <img src="images/song4.webp">
+                    <p>Ve Kamleya</p>
+                </div>
+                </a>
+            </div>
+            
+        </div>
+        <img src="images/next.png" style="width: 40px; height: 50px;" id="next" onclick="right()">
+    </div>
+   
+   </div>
+
+   <!-- cards section 2 starts here -->
+   <section class="sec-1">
+    <div class="card-heading">
+    <div class="heading-1">
+    <h1>English Songs</h1>
+</div>
+<div class="gallery-wrap">
+    <img src ="images/previous.png" id="backbtn2"  style="width: 70px;" onclick=" myfun1()">
+    <div class="cards" id="cards2">
+        <div class="box-1">
+            <a href="song5.html">
+            <div class="image-5">
+                <!-- <img src="images/song1.webp"> -->
+                
+            </div>
+           <div class="play-btn">
+                <img src="images/play.png">
+            </div>
+            <div class="text-1">
+                <p>Cover Me In Sunshine</p>
+                <p>P!nk, Willow Sage Hart - Cover Me In Sunshine</p>
+            </div>
+        </a>
+        </div>
+
+        <div class="box-1">
+            <a href="song6.html">
+            <div class="image-6">
+                <!-- <img src="images/song1.webp"> -->
+                
+            </div>
+           <div class="play-btn">
+                <img src="images/play.png">
+            </div>
+            <div class="text-1">
+                <p>Believer</p>
+                <p>Imagine Dragons - Believer</p>
+            </div>
+        </a>
+        </div>
+
+
+        <div class="box-1">
+            <a href="song7.html">
+            <div class="image-8">
+                <!-- <img src="images/song1.webp"> -->
+                
+            </div>
+           <div class="play-btn">
+                <img src="images/play.png">
+            </div>
+            <div class="text-1">
+                <p>Perfect</p><br>
+                <p>Ed Sheeran - ÷ (Deluxe)</p>
+            </div>
+        </a>
+        </div>
+
+        <div class="box-1">
+            <a href="song8.html">
+            <div class="image-7">
+                <!-- <img src="images/song1.webp"> -->
+                
+            </div>
+           <div class="play-btn">
+                <img src="images/play.png">
+            </div>
+            <div class="text-1">
+                <p>Unstoppable</p><br>
+                <p>Sia - Unstoppable</p>
+            </div>
+        </a>
+        </div>
+
+     
+    </div>
+    <img src ="images/next.png" id="nextbtn2" style="width: 80px;" onclick="myfun()">
+</div>
+
+</div>
+</section>
+
+<!-- mobile responsive section2 starts here  -->
+<div class="mb-sec-1" >
+    <div class="mb-heading-1">
+        <h1>English Songs</h1>
+    </div>
+    <div class="mb-gallery"   >
+        <img src="images/previous.png" style="width: 30px; height: 50px; margin:0px 5px;" id="back2"  onclick=" left2()">
+        <div class="mb-cards" id="gallery2" >
+         
+            <div class="mb-box-1" >
+                <a href="song5.html">
+                <div class="mb-image">
+                    <img src="images/song5.webp">
+                    <p>Cover Me In Sunshine</p>
+                </div>
+            </a>
+            </div>
+
+            <div class="mb-box-1">
+                <a href="song6.html">
+                <div class="mb-image">
+                    <img src="images/song6.webp">
+                    <p>Believer</p>
+                </div>
+            </a>
+            </div>
+
+            <div class="mb-box-1">
+                <a href="song7.html">
+                <div class="mb-image">
+                    <img src="images/song7.webp">
+                    <p>Perfect</p>
+                </div>
+            </a>
+            </div>
+            <div class="mb-box-1">
+                <a href="song8.html">
+                <div class="mb-image">
+                    <img src="images/song8.webp">
+                    <p>Unstoppable</p>
+                </div>
+            </a>
+            </div>
+            
+        </div>
+        <img src="images/next.png" style="width: 40px; height: 50px;" id="next2" onclick="right2()">
+    </div>
+   
+   </div>
+
+   <!-- cards section 3 starts here -->
+   <div class="sec-3">
+    <div class="head-img-3">
+   <div class="heading-3">
+    <h1>Top Indie Artists</h1>
+</div>
+<div class="all-images-3">
+    <a href="song12.html">
+    <img src="images/p1.jpg" style="width: 150px; height: 150px;"></a>
+    <a href="song11.html">
+    <img src="images/p2.jpg" style="width: 150px; height: 150px;"></a>
+    <img src="images/p3.jpg" style="width: 150px; height: 150px;">
+    <img src="images/p4.jpg" style="width: 150px; height: 150px;">
+    <img src="images/p5.jpg" style="width: 150px; height: 150px;">
+    <img src="images/p6.jpg" style="width: 150px; height: 150px;">
+</div>
+</div>
+</div>
+
+<!-- mobile cards 3 starts here -->
+<div class="mb-sec-3">
+    <div class="mb-head-3">
+        <h1>Top Indie Artists</h1>
+    </div>
+    <div class="mb-img-3">
+        <img src="images/p1.jpg" style="width: 100px; height: 100px;">
+        <img src="images/p2.jpg" style="width: 100px; height: 100px;">
+        <img src="images/p3.jpg"style="width: 100px; height: 100px;">
+        <img src="images/p4.jpg" style="width: 100px; height: 100px;">
+        <img src="images/p5.jpg" style="width: 100px; height: 100px;">
+        <img src="images/p6.jpg" style="width: 100px; height: 100px;">
+
+    </div>
+</div>
+
+<!-- cards section 4 starts here -->
+<section class="sec-1">
+    <div class="card-heading">
+    <div class="heading-1">
+    <h1>Top Hindi Songs</h1>
+</div>
+<div class="gallery-wrap">
+    <img src ="images/previous.png" id="backbtn4"  style="width: 70px;" onclick=" myfun4()">
+    <div class="cards" id="cards4">
+        <div class="box-1">
+            <a href="song9.html">
+            <div class="image-9">
+                <!-- <img src="images/song1.webp"> -->
+                
+            </div>
+           <div class="play-btn">
+                <img src="images/play.png">
+            </div>
+            <div class="text-1">
+                <p>Dua (From "Article 370")</p>
+                <p>Jubin Nautiyal, Priyanshi Naidu</p>
+            </div>
+        </a>
+        </div>
+
+        <div class="box-1">
+            <a href="song10.html">
+            <div class="image-10">
+                <!-- <img src="images/song1.webp"> -->
+                
+            </div>
+           <div class="play-btn">
+                <img src="images/play.png">
+            </div>
+            <div class="text-1">
+                <p>Deva Deva (From "Brahmastra")</p>
+                <p>Pritam, Arijit Singh</p>
+            </div>
+        </a>
+        </div>
+
+        <div class="box-1">
+            <a href="song11.html">
+            <div class="image-11">
+                <!-- <img src="images/song1.webp"> -->
+                
+            </div>
+           <div class="play-btn">
+                <img src="images/play.png">
+            </div>
+            <div class="text-1">
+                <p>Rasiya (From "Brahmastra")</p><br>
+                <p>Pritam, Shreya Ghoshal</p>
+            </div>
+        </a>
+        </div>
+
+        <div class="box-1">
+            <a href="song12.html">
+            <div class="image-12">
+                <!-- <img src="images/song1.webp"> -->
+                
+            </div>
+           <div class="play-btn">
+                <img src="images/play.png">
+            </div>
+            <div class="text-1">
+                <p>Satranga (From "ANIMAL")</p><br>
+                <p>Arijit Singh - Satranga (From "ANIMAL")</p>
+            </div>
+        </a>
+        </div>
+
+     
+    </div>
+    <img src ="images/next.png" id="nextbtn4" style="width: 80px;" onclick="next4()">
+</div>
+
+</div>
+</section>
+
+<!-- mobile responsive section 4 starts here -->
+ <div class="mb-sec-1" >
+    <div class="mb-heading-1">
+        <h1>English Songs</h1>
+    </div>
+    <div class="mb-gallery"   >
+        <img src="images/previous.png" style="width: 30px; height: 50px; margin:0px 5px;" id="backbtns4"  onclick=" left4()">
+        <div class="mb-cards" id="gallery4" >
+         
+            <div class="mb-box-1" >
+                <a href="song9.html">
+                <div class="mb-image">
+                    <img src="images/song9.webp">
+                    <p>Dua (From "Article 370")</p>
+                </div>
+            </a>
+            </div>
+
+            <div class="mb-box-1">
+                <a href="song10.html">
+                <div class="mb-image">
+                    <img src="images/song10.webp">
+                    <p>Deva Deva (From "Brahmastra")</p>
+                </div>
+            </a>
+            </div>
+
+            <div class="mb-box-1">
+                <a href="song11.html">
+                <div class="mb-image">
+                    <img src="images/song11.webp">
+                    <p>Rasiya (From "Brahmastra")</p>
+                </div>
+            </a>
+            </div>
+            <div class="mb-box-1">
+                <a href="song12.html">
+                <div class="mb-image">
+                    <img src="images/song12.webp">
+                    <p>Satranga (From "ANIMAL")</p>
+                </div>
+            </a>
+            </div>
+            
+        </div>
+        <img src="images/next.png" style="width: 40px; height: 50px;" id="nextbtns4" onclick="right4()">
+    </div>
+   
+   </div> 
+
+   <!-- footer starts here -->
+   <footer>
+    <div class="logo-foot">
+    <div class="logo-footer">
+        <span>Flamingo</span>
+    </div>
+    <div class="all-cards">
+    <div class="fcard-1">
+        <h1>LATEST ALBUMS</h1>
+        <p>Walkerworld  |  Crakk - Jeetegaa Toh Jiyegaa  |  Vikram Original Motion Picture Soundtrack  |  Thallumaala  |  Pushpa - The Rise </p>
+    </div>
+    <div class="fcard-1">
+        <h1>OLD SONGS</h1>
+       <p>Old  Songs  |  Old Hindi Songs  |  Old English Songs  |  Old Punjabi Songs  |  Old Telugu Songs  |  Old Tamil Songs  |  Old Bengali Songs </p>
+    </div>
+    <div class="fcard-1">
+        <h1>TOP ARTISTS</h1>
+      <p>Guru Randhawa  |  Arijit Singh  |  Atif Aslam  |  Justin Bieber  |  Gulzar  |  Armaan Malik  |  Sidhu Moose Wala  |  Alan Walker  |  Udit Narayan  </p>
+    </div>
+    <div class="fcard-1">
+        <h1>SONGS WITH LYRICS</h1>
+     <p>Coca Cola  |  Bom Diggy Diggy  |  Machayenge  |  Tera Yaar Hoon Main </p>
+    </div>
+   
+
+</div>
+<div class="foot-img">
+    <img src="images/bg-1.webp" width="150px">
+    </div>
+</div>
+   </footer>
+
+    <script src="script.js"></script>
+   
+</body>
+</html>
